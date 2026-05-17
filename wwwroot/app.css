@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #F4EFE6;
+    --surface: #E7DED2;
+    --primary: #B96B59;
+    --accent: #D8A94B;
+    --sage: #9CA077;
+    --blue: #5D7C8C;
+    --cocoa: #5C4742;
+    --blush: #D7A38F;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--cocoa);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.03em;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+.glass {
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(92,71,66,0.08);
+}
+
+.section-spacing {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.text-gradient {
+    background: linear-gradient(
+        135deg,
+        #B96B59,
+        #D8A94B
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.soft-shadow {
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.06),
+        0 2px 10px rgba(0,0,0,0.03);
+}
+
+.paper-line {
+    border-top: 1px solid rgba(92,71,66,0.12);
+}

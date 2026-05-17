@@ -1,0 +1,20 @@
+<div class="max-w-3xl space-y-4">
+    <span class="text-sm uppercase tracking-[0.3em] text-accent">@Eyebrow</span>
+
+    <h2 class="text-4xl font-black tracking-tight text-white md:text-6xl">
+        @Title
+    </h2>
+
+    @if (!string.IsNullOrWhiteSpace(Description))
+    {
+        <p class="text-lg leading-relaxed text-slate-400">
+            @Description
+        </p>
+    }
+</div>
+
+@code {
+    [Parameter] public string Eyebrow { get; set; } = "";
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string Description { get; set; } = "";
+}

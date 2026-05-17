@@ -1,0 +1,13 @@
+<a href="@Href" class="
+inline-flex items-center justify-center
+rounded-2xl bg-primary px-8 py-4
+font-semibold text-white shadow-glow
+transition-all duration-300
+hover:scale-105 hover:opacity-90">
+    @Text
+</a>
+
+@code {
+    [Parameter] public string Text { get; set; } = "";
+    [Parameter] public string Href { get; set; } = "#";
+}

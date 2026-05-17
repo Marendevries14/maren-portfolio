@@ -1,0 +1,36 @@
+﻿@page "/Error"
+@using System.Diagnostics
+
+<PageTitle>Fout</PageTitle>
+
+<h1 class="text-danger">Fout.</h1>
+<h2 class="text-danger">Er is een fout opgetreden bij het verwerken van je aanvraag.</h2>
+
+@if (ShowRequestId)
+{
+    <p>
+        <strong>Aanvraag-ID:</strong> <code>@RequestId</code>
+    </p>
+}
+
+<h3>Ontwikkelmodus</h3>
+<p>
+    Overschakelen naar de omgeving <strong>Development</strong> toont meer gedetailleerde informatie over de opgetreden fout.
+</p>
+<p>
+    <strong>De omgeving Development moet niet ingeschakeld zijn voor gedeployde applicaties.</strong>
+    Dit kan gevoelige informatie uit uitzonderingen tonen aan eindgebruikers.
+    Voor lokaal debuggen schakel je de omgeving <strong>Development</strong> in door de omgevingsvariabele <strong>ASPNETCORE_ENVIRONMENT</strong> op <strong>Development</strong> te zetten
+    en de app opnieuw te starten.
+</p>
+
+@code{
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    private string? RequestId { get; set; }
+    private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+    protected override void OnInitialized() =>
+        RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+}
