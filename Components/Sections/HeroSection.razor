@@ -1,6 +1,21 @@
 @namespace MVDesign.Components.Sections
 @using MVDesign.Components.UI
 
+<style>
+    .tech-label {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: #f5f1e8;
+        border: 1px solid #e8e0d5;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6b4e3d;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
 <section class="paper relative min-h-screen overflow-hidden pt-36">
     <div class="absolute left-[45%] top-32 hidden h-40 w-40 rounded-full bg-sage/30 lg:block"></div>
     <div class="absolute right-16 bottom-20 h-52 w-52 rounded-full bg-primary/20"></div>
@@ -41,12 +56,12 @@
                         Gebouwd op nieuwsgierigheid
                     </p>
 
-                    <div class="grid max-w-2xl grid-cols-2 gap-4 text-sm text-cocoa/70 sm:grid-cols-5">
-                        <span>🦋<br />Creatieve maker</span>
-                        <span>📍<br />Reisliefhebber</span>
-                        <span>⌘<br />Tech enthousiast</span>
-                        <span>🐴<br />Buitenmens</span>
-                        <span>▥<br />Geluid & systemen</span>
+                    <div class="flex flex-wrap">
+                        <span class="tech-label">🦋 Creatieve maker</span>
+                        <span class="tech-label">📍 Reisliefhebber</span>
+                        <span class="tech-label">⌘ Tech enthousiast</span>
+                        <span class="tech-label">🐴 Buitenmens</span>
+                        <span class="tech-label">▥ Geluid & systemen</span>
                     </div>
                 </div>
             </div>
@@ -64,14 +79,14 @@
                              class="h-[680px] w-full object-cover object-center" />
                     </div>
 
-                    <div class="absolute -bottom-10 left-16 rotate-[-4deg] bg-paper p-6 soft-shadow">
+                    @* <div class="absolute -bottom-10 left-16 rotate-[-4deg] bg-paper p-6 soft-shadow">
                         <p class="script text-lg text-cocoa">
                             Oplossingen<br />
                             die werken.<br />
                             Voor mensen.<br />
                             In de praktijk.
                         </p>
-                    </div>
+                    </div> *@
 
                     <div class="absolute -right-6 bottom-8 text-7xl">
                         🦋
