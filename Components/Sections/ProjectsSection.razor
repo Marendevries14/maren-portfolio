@@ -1,6 +1,39 @@
 @namespace MVDesign.Components.Sections
 @using MVDesign.Components.UI
 
+<style>
+    .tech-label {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background-color: #f5f1e8;
+        border: 1px solid #e8e0d5;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #6b4e3d;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .project-labels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+</style>
+
 <section id="projecten" class="bg-paper py-28">
     <Container>
         <div class="max-w-3xl">
@@ -14,7 +47,32 @@
         </div>
 
         <div class="mt-16 grid gap-8 lg:grid-cols-2">
-            <article class="overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
+
+              <article class="project-card overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
+                <div class="h-72 w-full overflow-hidden">
+                    <img
+                        src="images/maren-smile.jpg"
+                        alt="Maren lachend"
+                        class="h-full w-full object-cover object-top"
+                    />
+                </div>
+                <div class="project-content p-10">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-primary">Projectmanagement</p>
+                    <h3 class="mt-4 text-4xl text-cocoa">Project-, Account- en Consultondersteuning</h3>
+                    <div class="project-labels mt-4 flex flex-wrap">
+                        <span class="tech-label">Jira</span>
+                        <span class="tech-label">Umbraco</span>
+                        <span class="tech-label">Scrum/Agile</span>
+                        <span class="tech-label">Projectmanagement</span>
+                    </div>
+                    <p class="mt-5 leading-8 text-cocoa/70">
+                    Als Project Support Specialist verantwoordelijk voor het creëren van overzicht, structuur en een efficiënte samenwerking binnen projecten. Ondersteuning geboden bij projectcoördinatie, planning, klantcontact, backlogbeheer en offertes/facturering. Daarnaast waar nodig verantwoordelijkheden overgenomen van Project-, Team- en Accountleads, waardoor projecten soepel verlopen en klanten optimaal worden ondersteund.
+
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
                 <div class="h-72 w-full overflow-hidden">
                     <img
                         src="images/DBArriva.png"
@@ -22,18 +80,23 @@
                         class="h-full w-full object-cover object-top"
                     />
                 </div>
-                <div class="p-10">
+                <div class="project-content p-10">
                     <p class="text-sm font-bold uppercase tracking-[0.22em] text-primary">Dashboard verkeersleiding</p>
                     <h3 class="mt-4 text-4xl text-cocoa">Product Owner</h3>
+                    <div class="project-labels mt-4 flex flex-wrap">
+                        <span class="tech-label">Scrum/Agile</span>
+                        <span class="tech-label">Projectmanagement</span>
+                        <span class="tech-label">UX Design</span>
+                        <span class="tech-label">Azure DevOps</span>
+                    </div>
                     <p class="mt-5 leading-8 text-cocoa/70">
                         Dashboardproject waarin de rol van Product Owner werd vervuld. Verantwoordelijk voor het vertalen van wensen vanuit de operatie naar technische requirements voor het developmentteam. Daarnaast zijn testplannen opgesteld, gebruikerstesten uitgevoerd en is gedurende het project nauw samengewerkt met developers en stakeholders. Hierbij zijn vaardigheden ingezet op het gebied van UX-design, het ontwerpen van logische gebruikersflows en het optimaliseren van processen, met als doel een gebruiksvriendelijk en efficiënt dashboard te realiseren.
                     </p>
                 </div>
             </article>
 
-            
-
-            <article class="overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
+           
+            <article class="project-card overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
                 <div class="h-72 w-full overflow-hidden">
                     <img
                         src="images/Humanizer.png"
@@ -41,12 +104,46 @@
                         class="h-full w-full object-cover object-top"
                     />
                 </div>
-                <div class="p-10">
+                <div class="project-content p-10">
                     <p class="text-sm font-bold uppercase tracking-[0.22em] text-primary">Humanizer</p>
                     <h3 class="mt-4 text-4xl text-cocoa">AI & Toegankelijkheid</h3>
+                    <div class="project-labels mt-4 flex flex-wrap">
+                        <span class="tech-label">JavaScript</span>
+                        <span class="tech-label">Vue.js</span>
+                        <span class="tech-label">C#</span>
+                        <span class="tech-label">.NET</span>
+                        <span class="tech-label">Azure DevOps</span>
+                        <span class="tech-label">OpenAI</span>
+                    </div>
                     <p class="mt-5 leading-8 text-cocoa/70">
                         End-to-end afstudeerproject gericht op digitale toegankelijkheid (WCAG).
 Het project omvatte onderzoek naar WCAG-richtlijnen, website-analyses en de ontwikkeling van een webapplicatie met JavaScript, Vue.js en .NET(C#). Hiervoor is een tool ontwikkeld die de toegankelijkheid van websites kan beoordelen tijdens de ontwikkelfase én na livegang. De tool analyseert zowel de HTML-structuur als een screenshot van de volledige pagina en combineert deze gegevens met WCAG-richtlijnen en AI-technologie. Op basis hiervan genereert de applicatie inzichten in de toegankelijkheid van een website, inclusief concrete verbeterpunten en aanbevelingen voor vervolgstappen.
+                    </p>
+                </div>
+            </article>
+
+            
+
+            <article class="project-card overflow-hidden rounded-[2.5rem] bg-cream soft-shadow">
+                <div class="h-72 w-full overflow-hidden">
+                    <img
+                        src="images/maren-coding.jpg"
+                        alt="Maren coderend"
+                        class="h-full w-full object-cover object-top"
+                    />
+                </div>
+                <div class="project-content p-10">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-primary">Memories</p>
+                    <h3 class="mt-4 text-4xl text-cocoa">Memories app</h3>
+                    <div class="project-labels mt-4 flex flex-wrap">
+                        <span class="tech-label">Razor</span>
+                        <span class="tech-label">Node.js</span>
+                        <span class="tech-label">Docker</span>
+                        <span class="tech-label">Tailwind CSS</span>
+                    </div>
+                    <p class="mt-5 leading-8 text-cocoa/70">
+                    Persoonlijk project gericht op het creëren van een digitale herinneringen-app. De app is ontworpen om gebruikers in staat te stellen hun dierbare herinneringen op een gestructureerde en toegankelijke manier vast te leggen, te organiseren en te delen. Met een focus op gebruiksvriendelijkheid en functionaliteit, biedt de app mogelijkheden voor het toevoegen van foto's, notities en tags aan herinneringen, evenals opties voor het delen van herinneringen met vrienden en familie.
+
                     </p>
                 </div>
             </article>
